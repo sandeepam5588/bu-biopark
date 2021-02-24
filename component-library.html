@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" />
+    
+    <title>sandeep portfolio</title>
+</head>
+<body>
+    <h1> components library for simple portfolio</h1>
+
+    <h1>@typogropy</h1>
+    <h1>This is the heighest heading</h1>
+    <h2>This is the second heighest heading</h2>
+    <p>This is paragraph</p>
+    <small>This is relatively small text</small>
+    <hr>
+   <p>this paragraph has <strong>bold</strong> text</p>
+
+    <h1>@containers</h1>
+    <h2>@fluid container</h2>
+
+    <div class="container">this is going to be a fluid conatiner.it will go full width of page. with some margin</div>
+
+
+    <h2>@center container</h2>
+    <div class="container container-center">This is going to be a center container. it will go till a given width and center content</div>
+    <hr>
+
+    <h1>@links</h1>
+    <a href="/" class="link link-primary">primary link</a> 
+    <a href="/" class="link link-secondary">secondary link</a>
+    <hr>
+
+    <h1>@lists</h1>
+    <h2>unordered lists</h2>
+   <p> we dont want to show the bullets in the unordered lists 
+    remove them with css</p>
+    <ul class="list-non-bullet">
+        <li>item one</li>
+        <li>item two</li>
+        <li>item three</li>
+    </ul>
+    <h2>inline lists</h2>
+   <p> insted of going in a new row. we will create a list which will take columns</p>
+    <ul class="list-non-bullet">
+        <li class="list-item-inline">item-one</li>
+        <li class="list-item-inline">item-two</li>
+        <li class="list-item-inline">item-three</li>
+    </ul>
+    <h2>reverse ordered list</h2>
+    <p>counting of weill go reverse for this lists</p>
+    <ol reversed>
+        <li>something</li>
+        <li>something else</li>
+        <li>something elser</li>
+    </ol>
+    <hr>
+
+
+    <h1>@nav</h1>
+   <p> navigation is used on the top of the page and used to get to different pages</p>
+    <nav class="navigation container">
+        <div class="nav-brand">IamBrand</div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a href="/" class="link link-active">home</a>
+            </li>
+            <li class="list-item-inline">
+                <a href="/" class="link">project</a>
+            </li>
+            <li class="list-item-inline">
+                <a href="/" class="link">blogs</a>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+
+
+    <h1>@header</h1>
+    <header class="lerner-header">
+        <img src="images/lerner.svg" class="lerner-img">
+        <h1 class="lerner-heading">Sandeep the Web Developer</h1>
+    </header>
+    <hr>
+
+
+    <h1>@section</h1>
+   <p> a section is used to separate parts of pages. in marketing website you would have seen a header folllowed by sections of features. team, pricing, contact info etc.</p>
+   <h2>@normal section</h2>
+   <section class="section">
+       <div class="container container-center">
+           <h2>heading inside section</h2>
+           <p>text defining this section and many more thingstext defining this section and many more thingstext defining this section and many more thingstext defining this section and many more thingstext defining this section and many more thingstext defining this section and many more thingstext defining this section and many more things</p>
+            <a href="/" class="link link-primary">Primary Button</a>
+       </div>
+</section>
+
+   <h2>@off white sectoin</h2>
+   <section class="section off-white-section">
+    <div class="container container-center">
+       <h2>inside off white section</h2>
+       <p>text defining this section and many more thingstext defining this section and many more thingstext defining this section and many more thingstext defining this section and many more thingstext defining this section and many more thingstext defining this section and many more thingstext defining this section and many more things</p>
+       <a href="/" class="link link-primary">primary button</a>
+    </div>
+   </section>
+<hr>
+<h1>@image-container</h1>
+<div class="container container-image">
+    <img class="container-image-img" src="images/peacock.jpg" alt="forest-image">  
+    <p class="container-image-title">welcome to bu bio-park</p>
+    <p class="container-image-description">introduction about bu bio park, it contains what this website captures
+        and what special about bu bio park .introduction about bu bio park, it contains what this website captures
+        and what special about bu bio park .introduction about bu bio park, it contains what this website captures
+        and what special about bu bio park .introduction about bu bio park, it contains what this website captures
+        and what special about bu bio park . 
+    </p>
+    <a href="/" class="link link-secondary container-image-button">Image Gallery</a> 
+</div>
+
+<hr>
+<h2>@progress circles</h2>
+<div class="circle-wrap">
+    <div class="circle">
+      
+      <div class="mask full">
+        <div class="fill"></div>
+      </div>
+      <div class="mask half">
+        <div class="fill"></div>
+      </div>
+      <div class="inside-circle">
+        70%
+      </div>
+    </div>
+</div>
+<hr>
+<!-- slide show goes here -->
+<h2>Automatic Slideshow</h2>
+<p>Change image every 2 seconds:</p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/slideshow-1.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/slideshow-2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/slideshow-3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<script src="javascript/slideshow.js"></script>
+<hr>
+
+<h1>@footer</h1>
+<footer class="footer">
+    <div class="footer-header">header inside footer</div>
+        <ul class="links-social list-non-bullet">
+           <li class="list-item-inline">
+               <a href="/" class="link link-primary">twitter</a>
+           </li>
+           <li class="list-item-inline">
+               <a href="/" class="link link-primary">github</a>
+            </li>
+           <li class="list-item-inline">
+               <a href="/" class="link link-primary">linkedin</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+
+</body>
+</html>

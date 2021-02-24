@@ -1,0 +1,293 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,700&display=swap');
+:root {
+    --primary-color:#7C3AED;
+    --dark-gray:#9CA3AF;
+    --light-gray: #F3F4F6;
+ 
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+
+hr {
+    margin: 2rem 0rem;
+}
+
+/* containers */
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.container-center {
+    max-width: 600px;
+    margin: auto;
+}
+.container-image {
+    max-width: 1500px;
+    height: 360px;
+    margin: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+}
+.container-image-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 2rem;
+    float: left;
+}
+.container-image-title {
+    font-size: 1.5rem;
+    display: inline;
+    float: left;
+    border-bottom: 6px solid rgba(255, 0, 0, 0.623);
+    height: 2.5rem;
+    padding-left: 0.2rem;
+    width: 1000px;
+}
+.container-image-description {
+    font-size: medium;
+    width: 1300px;
+    line-height: 1.8;
+}
+.container-image-button {
+    margin-top: 80px;
+}
+
+/* links primary and secondary */
+.link {
+    text-decoration: none;
+    border-radius: 0.5rem;;
+    padding: 0.5rem 1rem;
+    
+}
+
+.link-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.link-secondary {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+/* lists  */
+.list-non-bullet {
+    list-style: none;
+}
+
+.list-item-inline {
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+
+/* navigation */
+.navigation {
+    color: white;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.navigation .nav-brand {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/**
+*if there is a link class inside navigation class then override its color property.
+* next level of inheitance 
+*/
+.navigation .link {
+    color: white;
+}
+
+.navigation .nav-pills {
+    text-align: right;
+}
+.navigation .link-active {
+    font-weight: bold;
+
+}
+.lerner-header {
+    padding: 5rem 2rem 2rem 2rem;
+}
+
+.lerner-img{
+  max-width: 350px;
+  display: block;
+  margin: auto;
+}
+
+.lerner-heading {
+    color: var(--dark-gray);
+    padding-top: 1rem;
+    text-align: center;
+}
+.section {
+    padding: 2rem;
+}
+.section h2{
+    text-align: center;
+}
+
+.off-white-section {
+    background-color: var(--light-gray);
+}
+
+/* progress circles */
+.circle-wrap {
+    margin: 50px auto;
+    width: 150px;
+    height: 150px;
+    background: #e6e2e7;
+    border-radius: 50%;
+  }
+  .circle-wrap .circle .mask,
+  .circle-wrap .circle .fill {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+  }
+
+  .circle-wrap .circle .mask .fill {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #9e00b1;
+  }
+  .circle-wrap .circle .mask.full,
+  .circle-wrap .circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(126deg);
+  }
+   
+  @keyframes fill {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(126deg);
+    }
+  }
+  .circle-wrap .inside-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #fff;
+    line-height: 130px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+.footer {
+    background-color: var(--primary-color);
+    padding: 2rem 1rem;
+    color: white;
+    text-align:center;
+    border-top-right-radius: 1rem;
+
+}
+.footer-header {
+    font-weight: bold;
+    font-size: large;
+}
+.footer .link {
+    color: white;
+}
+
+.footer ul {
+    padding-inline-start: 0px;
+
+}
+
+
+/**  css for projects page***/
+.separator {
+    padding: 2rem 0rem;
+}
+/* css for slideshow */
+.mySlides {display: none;}
+/* img {vertical-align: middle;} */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
