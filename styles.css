@@ -22,6 +22,7 @@ hr {
 .container {
     padding-left: 1rem;
     padding-right: 1rem;
+    height: 150px;
 }
 
 .container-center {
@@ -59,7 +60,13 @@ hr {
     line-height: 1.8;
 }
 .container-image-button {
-    margin-top: 80px;
+  color: var(--primary-color);
+  background-color: white;
+  
+}
+.container-image-button:hover {
+  background-color: green;
+  color:white
 }
 
 /* links primary and secondary */
@@ -98,11 +105,12 @@ hr {
     background-color: var(--primary-color);
     border-bottom-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 .navigation .nav-brand {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 2.2rem;
 }
 
 /**
@@ -229,7 +237,7 @@ hr {
 /* img {vertical-align: middle;} */
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 1300px;
     position: relative;
     margin: auto;
   }
@@ -291,3 +299,86 @@ hr {
   @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
   }
+
+  /* cards goes here */
+  .card-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .card {
+    width: 400px;
+    height: 500px;
+    margin: 0px 20px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+    transition: all 150ms ease-in-out;
+  }
+  .card:hover {
+    top: -3px;
+    left: -3px;
+    box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+  }
+  .card:active {
+    top: 2px;
+    left: 2px;
+    background-color: #e50000;
+    box-shadow: inset 0 0 10px rgba(82, 82, 82, 0.85);
+  }
+  .card-text {
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  
+.card-title h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+ 
+}
+.card-title h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #b80000;
+}
+.card-title h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #b80000;
+}
+.card-link {
+position: absolute;
+right:    0;
+bottom:   0;
+margin-bottom: 0.5rem;
+margin-right: 0.5rem;
+}
+.card-link:hover {
+  color:white;
+  background-color: rgb(131, 22, 3);
+}
