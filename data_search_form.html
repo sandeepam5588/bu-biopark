@@ -2,83 +2,32 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>search page</title>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font: 16px Arial;  
-  text-align: center;
-  background-color: rgba(164, 148, 168, 0.24);
-}
-
-/*the container must be positioned relative:*/
-.autocomplete {
-  position: relative;
-  display: inline-block;
-}
-
-input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 16px;
-}
-
-input[type=text] {
-  background-color: #f1f1f1;
-  width: 100%;
-}
-
-input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
-  cursor: pointer;
-}
-
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-
-.autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
-}
-
-/*when hovering an item:*/
-.autocomplete-items div:hover {
-  background-color: #e9e9e9; 
-}
-
-/*when navigating through the items using the arrow keys:*/
-.autocomplete-active {
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
-}
-</style>
+<title>search | bu-biopark</title>
+<link rel="stylesheet" href="search_page_styles.css">
 </head>     
 <body>
-
-<h2>Autocomplete</h2>
-
+  <!-- Navigation bar -->
+  <nav class="navigation container">
+    <div class="nav-brand">Jnanabharathi Nisargadhama</div>
+    <ul class="list-non-bullet nav-pills">
+        <li class="list-item-inline">
+            <a href="/" class="link">HOME</a>
+        </li>
+        <li class="list-item-inline">
+            <a href="data_search_form.html" class="link link-active">SEARCH</a>
+        </li>
+        <li class="list-item-inline">
+            <a href="data_upload_form.html" class="link">UPLOAD</a>
+        </li>
+    </ul>
+</nav>
+<center>
 <!--Make sure the form has the autocomplete function switched off:-->
 <form autocomplete="off" action="/data_retrieve.php">
   <div class="autocomplete" style="width:300px;">
     <input id="tree_name" type="text" name="tree_name" placeholder="Name of the plant or Tree or animal">
   </div>
-  <input type="submit">
+  <input type="submit" value="search">
 </form>
 
 <script>
@@ -222,6 +171,6 @@ var treenames = ["Afghanistan","Albania","Algeria","Andorra","Angola",
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("tree_name"), treenames);
 </script>
-
+</center>
 </body>
 </html>
