@@ -22,12 +22,33 @@
  //taking values from form data
  $tree_name = $_REQUEST['tree_name'];
  $scientific_name = $_REQUEST['scientific_name'];
- $filename = $_FILES["uploadfile"]["name"];
- $tempname = $_FILES["uploadfile"]["tmp_name"];     
+ $tree_type = $_REQUEST['tree_type'];
+ $tree_number = $_REQUEST['tree_number'];
+ $tree_location = $_REQUEST['tree_location'];
+ $tree_medicfeature = $_REQUEST['tree_medicfeature'];
+
+ $filename = $_FILES["tree_imgfile"]["name"];
+ $tempname = $_FILES["tree_imgfile"]["tmp_name"];     
  $folder = "image/".$filename; 
 
  // Performing insert query execution 
- $sql = "INSERT INTO mybiopark(tree_name, scientific_name, filename) VALUES ('$tree_name', '$scientific_name', '$filename')";
+ $sql = "INSERT INTO
+  mybiopark
+  (tree_name,
+   scientific_name,
+   tree_type,tree_number,
+   tree_location,
+   tree_medicfeature,
+   imgfilename)
+  VALUES
+  ('$tree_name',
+   '$scientific_name',
+   '$tree_type',
+   '$tree_number',
+   '$tree_location',
+   '$tree_medicfeature',
+   '$folder')";
+
  if(mysqli_query($conn, $sql)){ 
     // Now let's move the uploaded image into the folder: image 
     if (move_uploaded_file($tempname, $folder)) {
@@ -36,8 +57,8 @@
        $msg = "Failed to upload image"; 
     } 
 
-    echo "<h3>data stored in a database successfully, you will be redirected to your form upload page in 6 seconds....</h3>";
-    header( "Refresh:6; url=data_upload_form.html", true, 303);    
+    echo "<h3>data stored in a database successfully, you will be redirected to your form upload page in 3 seconds....</h3>";
+    header( "Refresh:3; url=data_search_form.html", true, 303);    
  } else{ 
     echo "ERROR: Hush! Sorry $sql. " . mysqli_error($conn); 
  }   
