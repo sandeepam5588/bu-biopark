@@ -24,7 +24,28 @@
 
         form>fieldset {
             border: 3px solid white;
+            font-weight: 700;
         }
+
+        label {
+            float: left;
+            font-size: 1.2rem;
+        }
+        input{
+            float: right;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            width: 320px;
+        }
+
+        textarea {
+            margin-right:1rem;
+            float: right;
+            width: 320px;
+            height: 100px;
+            font-size: 1.2rem;
+        }
+        
     </style>
 </head>
 
@@ -72,9 +93,9 @@ if ($result->num_rows > 0) {
         $imgfilepath = $row["imgfilename"];
     }
 } else {
-    echo "0 results";
+    die("<h3><center>No Such Data.. Please enter the valid tree name</center</h3>");
+    header( "Refresh:3; url=data_search_form.html", true, 303);    
 }
-
 $conn->close();
 ?>
     <div class="myimgcontainer">
@@ -83,27 +104,46 @@ $conn->close();
  -->
     </div>
     <div class="mytextcontainer">
-        <form>
-            <fieldset>
-                <legend>Tree Information</legend>
 
-                <label>Tree Name</label>
-                <label><?php echo $tree_name ?></label><br>
+    <form>
+     <fieldset>
+                <legend>Tree Information</legend> 
+              
+            <p> 
+                <label for="treeName">Tree Name</label> 
+                <input type="text" value="<?php echo $tree_name ?>" readonly /> 
+            </p>  
+            <br>
 
-                <label>scientific Name</label>
-                <label><?php echo $scientific_name ?></label><br>
+            <p> 
+                <label for="scientificName">Scientific Name</label> 
+                <input type="text" value="<?php echo $scientific_name ?>" readonly /> 
+            </p> 
+            <br>
 
-                <label>type</label>
-                <label><?php echo $tree_type ?></label><br>
+             <p> 
+                <label for="type">Type</label> 
+                <input type="text" value="<?php echo $tree_type ?>" readonly /> 
+            </p> 
+            <br>
 
-                <label>tree number</label>
-                <label><?php echo $tree_number ?></label><br>
+             <p> 
+                <label for="tree_number">Tree number</label> 
+                <input type="text" value="<?php echo $tree_number ?>" readonly /> 
+            </p>
+            <br>
 
-                <label>tree location</label>
-                <label><?php echo $tree_location ?></label><br>
+             <p> 
+                <label for="tree_location">location</label> 
+                <input type="text" value="<?php echo $tree_location ?>" readonly /> 
+            </p>  
+            <br>
 
-                <label>medical use</label>
-                <label><?php echo $tree_medicfeature ?></label><br>
+             <p> 
+                <label for="tree_medicfeature">Medicinal features</label> 
+                <textarea rows="5" cols="25"><?php echo $tree_medicfeature ?></textarea>
+            </p> 
+            <br>
 
             </fieldset>
         </form>

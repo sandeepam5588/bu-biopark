@@ -133,3 +133,11 @@ input[type=submit] {
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
 }
+form {
+  margin-bottom: 420px;
+}
+.backgroundtext {
+  font-weight: 700px;
+  font-size: 3rem;
+  color: rgb(3, 65, 3); 
+}

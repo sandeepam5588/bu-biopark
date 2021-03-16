@@ -7,6 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>upload | bu-bio-park</title> 
     <link rel="stylesheet" href="styles.css">
+    <style>
+        form {
+            margin-bottom: 220px;
+        }
+        label {
+            margin-left: 30rem;
+            float: left;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 1.2rem;
+        }
+        input {
+            margin-right: 30rem;
+            float: right;
+            width: 300px;
+            height: 30px; 
+            margin-top: 0.8rem;
+            
+        }
+        textarea {
+            margin-right: 30rem;
+            float: right;
+            width: 300px;
+            height: 30px; 
+            margin-top: 0.8rem;
+            font-size: 1.4rem;
+        }
+
+    </style>
 </head> 
   
 <body> 
@@ -27,42 +56,44 @@
     </nav>
 
     <center> 
-        <h1>Storing Form data in Database</h1> 
   
         <form action="data_insertion.php" method="post" enctype="multipart/form-data"> 
               
             <p> 
-                <label for="treeName">Tree Name:</label> 
-                <input type="text" name="tree_name" id="treeName"> 
+                <label for="treeName">Tree Name</label> 
+                <input type="text" name="tree_name" id="treeName" placeholder="Sandolwood"> 
             </p>  
+            <br>
             <p> 
-                <label for="scientificName">scientific Name:</label> 
-                <input type="text" name="scientific_name" id="scientificName"> 
+                <label for="scientificName">Scientific Name</label> 
+                <input type="text" name="scientific_name" id="scientificName" placeholder="Santalum album" required> 
             </p> 
-
+            <br>
              <p> 
-                <label for="type">Type:</label> 
-                <input type="text" name="tree_type" id="tree_type"> 
+                <label for="type">Type</label> 
+                <input type="text" name="tree_type" id="tree_type" placeholder="Tree (plant / tree / herb)" required> 
             </p> 
-
+            <br>
              <p> 
-                <label for="type">Tree number:</label> 
-                <input type="text" name="tree_number" id="tree_number"> 
+                <label for="type">Tree number</label> 
+                <input type="text" name="tree_number" id="tree_number" placeholder="1018" required> 
             </p>
+            <br>
              <p> 
-                <label for="">location:</label> 
-                <input type="text" name="tree_location" id="tree_location"> 
+                <label for="">location</label> 
+                <input type="text" name="tree_location" id="tree_location" placeholder="MCA department" required> 
             </p>  
-
+            <br>
              <p> 
-                <label for="">Medicinal features:</label> 
-                <input type="text" name="tree_medicfeature" id="tree_medicfeature"> 
+                <label for="">Medicinal features</label> 
+                <textarea name="tree_medicfeature" id="tree_medicfeature" rows="4" cols="50" placeholder="increase alertness, manage anxiety, support wound healing, guard against skin cancer, fight bacteria." required> </textarea>
             </p> 
+            <br>
              <p> 
-                <label for="imagfile">Tree image:</label> 
-                <input type="file" name="tree_imgfile" id="tree_imgfile">            
+                <label for="imagfile">Tree image</label> 
+                <input type="file" name="tree_imgfile" id="tree_imgfile" required>            
             </p> 
-                
+            <br>   
             <input type="submit" value="Submit" name="upload"> 
         </form> 
     </center> 

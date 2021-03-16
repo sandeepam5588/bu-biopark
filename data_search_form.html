@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>search | bu-biopark</title>
 <link rel="stylesheet" href="search_page_styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>     
 <body>
   <!-- Navigation bar -->
@@ -24,8 +25,9 @@
 <center>
 <!--Make sure the form has the autocomplete function switched off:-->
 <form autocomplete="off" action="data_retrieve.php">
+  <h1 class="backgroundtext">Name of the Tree / Plant / Herb / Vine</h1>
   <div class="autocomplete" style="width:300px;">
-    <input id="tree_name" type="text" name="tree_name" placeholder="Name of the plant or Tree or animal">
+    <input id="tree_name" type="text" name="tree_name" placeholder="Name of the plant / Tree / herb">
   </div>
   <input type="submit" value="search">
 </form>
