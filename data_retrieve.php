@@ -7,17 +7,17 @@
     <style type="text/css">
        .myimgcontainer {
             margin: 1rem 1rem 1.5rem 6rem;
-            padding: 2rem;
-            width: 650px;
-            height: 600px;
+            padding: 1rem;
+            width: 450px;
+            height: 500px;
             float: left;
             background-color: tomato;
         }
          .mytextcontainer {
             margin: 1rem 1rem 1.5rem 1rem;
             padding: 2rem;
-            width: 650px;
-            height: 600px;
+            width: 850px;
+            height: 500px;
             float: left;
             background-color: tomato;
         }
@@ -35,15 +35,17 @@
             float: right;
             font-size: 1.2rem;
             margin-right: 1rem;
-            width: 320px;
+            width: 470px;
+            padding-left: 0.7rem;
         }
 
         textarea {
             margin-right:1rem;
             float: right;
-            width: 320px;
-            height: 100px;
+            width: 470px;
+            height: 200px;
             font-size: 1.2rem;
+            padding-left: 0.7rem;
         }
         
     </style>
@@ -99,7 +101,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
     <div class="myimgcontainer">
-        <img src="<?php echo $imgfilepath ?>" alt="tree image" width="600" height="550">
+        <img src="<?php echo $imgfilepath ?>" alt="tree image" width="420" height="470">
         <!-- <img src="image/p1 (2).jpg" alt="tree image" width="600" height="600">
  -->
     </div>
